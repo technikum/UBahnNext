@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width; height=device-height; user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+          html { height: 100% }
+          body { height: 100%; margin: 10px; padding: 5px }
+          #map_canvas { height: 60% }
+    </style>
+
+    <title>PhoneGap - Demo-App</title>
+    
+    <link rel="stylesheet" href="master.css" type="text/css" media="screen" title="no title">
+    <script src="phonegap.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+  </head>
+
+
+  <body id="stage" class="theme">
+  <div id="map_canvas" style="width:60%; height:60%"></div>
+  <form name="Form">
+       <input type="radio" name="Linien" value="AlleLinien" checked>Alle Linien anzeigen
+       <input type="radio" name="Linien" value="NurUBahnen">Nur U-Bahnen anzeigen
+       <br>
+       <input type="button" value="Zeige meine Position + Stationen!" onclick="run();" /> 
+       <input type="button" value="Exit" onclick="quit();" />
+     </form>
+</body>
+</html>
