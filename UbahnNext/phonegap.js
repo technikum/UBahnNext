@@ -19,7 +19,7 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
      };
 
 
-     navigator.geolocation.getCurrentPosition(win, fail);
+     navigator.geolocation.getCurrentPosition(win, fail, {enableHighAccuracy: true});
  }
 
 
