@@ -15,7 +15,7 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
 
 
      var fail = function(e) {
-              alert("Can\'t retrieve position.\nError: " + e);
+              alert("Can\'t retrieve position.\nError: " + e+"\nCode:"+e.code+"\nMessage:"+error.message);
      };
 
 
