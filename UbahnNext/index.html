@@ -5,8 +5,8 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <style type="text/css">
           html { height: 100% }
-          body { height: 100%; margin: 10px; padding: 5px }
-          #map_canvas { height: 60% }
+          body { height: 100%; margin: 2px }
+          #map_canvas { height: 90% }
     </style>
 
     <title>PhoneGap - Demo-App</title>
@@ -18,13 +18,13 @@
 
 
   <body id="stage" class="theme">
-  <div id="map_canvas" style="width:60%; height:60%"></div>
+  <div id="map_canvas" style="width:95%; height:90%"></div>
   <form name="Form">
-       <input type="radio" name="Linien" value="AlleLinien" checked>Alle Linien anzeigen
-       <input type="radio" name="Linien" value="NurUBahnen">Nur U-Bahnen anzeigen
+       <input type="radio" height=15px name="Linien" value="AlleLinien" checked>Alle Linien anzeigen
+       <input type="radio" height=15px name="Linien" value="NurUBahnen">Nur U-Bahnen anzeigen
        <br>
-       <input type="button" value="Zeige meine Position + Stationen!" onclick="run();" /> 
-       <input type="button" value="Exit" onclick="quit();" />
+       <input type="button" style="font-size: 15px" value="Zeige meine Position + Stationen!" onclick="run();" /> 
+       <input type="button" style="font-size: 15px" value="Exit" onclick="quit();" />
      </form>
 </body>
 </html>
