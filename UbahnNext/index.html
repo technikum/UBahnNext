@@ -35,5 +35,15 @@
               Refresh
           </button>
    </div>
+
+    <menu type="toolbar" label="Home">
+        <command label="Logout" action="callback()" />
+        <command label="back"   action="callback()" disabled="true" accesskey="back" />
+    </menu>
+
+    <menu type="context">
+        <command label="Home"      disabled="false" action="callback()" />
+        <command label="Settings"  disabled="false" action="callback()" />
+    </menu>
 </body>
 </html>
