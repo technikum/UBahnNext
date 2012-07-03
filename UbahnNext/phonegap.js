@@ -26,6 +26,9 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
         alert("Kein GPS eingeschaltet.");
      }
 
+
+
+     document.addEventListener("menubutton", onMenuKeyDown, false);
  }
 
 
@@ -200,6 +203,9 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
  }
 
 
+ function onMenuKeyDown() {
+     alert("Menubutton!");
+ }
 
  function quit() {
      navigator.app.exitApp();
