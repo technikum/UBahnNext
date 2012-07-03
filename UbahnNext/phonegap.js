@@ -191,14 +191,12 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
 
 
 
- function onMenuKeyDown() {
-    var menu = document.getElementById("menu");
-    if (menu.style.display == "none" || menu.style.display == "") {
-        menu.style.display = "block";
-    }
-   else {
-     menu.style.display = "none";
-   }
+ function alle() {
+    alert("alle");
+ }
+
+ function ubahn() {
+    alert("ubahn");
  }
 
 

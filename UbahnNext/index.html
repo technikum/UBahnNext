@@ -27,23 +27,12 @@
        <input type="button" style="font-size: 15px" value="Exit" onclick="quit();" />
      </form>
 
-  <div id="menu">
-          <button id="prefBtn" type="submit" onclick="showPref()">
-              Preferences
-          </button>
-          <button id="refreshBtn" type="submit" onclick="doRefresh()">
-              Refresh
-          </button>
-   </div>
 
-    <menu type="toolbar" label="Home">
-        <command label="Logout" action="callback()" />
-        <command label="back"   action="callback()" disabled="true" accesskey="back" />
-    </menu>
 
-    <menu type="context">
-        <command label="Home"      disabled="false" action="callback()" />
-        <command label="Settings"  disabled="false" action="callback()" />
-    </menu>
+
+   <menu type="context">
+      <command label="Alle"  disabled="false" action="alle();"  accesskey="" />
+      <command label="UBahn" disabled="false" action="ubahn();" accesskey="" />
+   </menu>
 </body>
 </html>
