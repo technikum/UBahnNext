@@ -216,7 +216,7 @@ alert("onDeviceReady");
  }
 
  function quit() {
-     navigator.app.exitApp();
+     app.exitApp();
  }
 
 
