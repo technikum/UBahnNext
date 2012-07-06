@@ -3,6 +3,16 @@ var map;
 var pinColor="FF0000";    //standort rot
 var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
 
+
+ function onLoad() {
+    document.addEventListener("deviceready", onDeviceReady, false);
+ }
+
+ function onDeviceReady() {
+    document.addEventListener("menubutton", onMenuKeyDown, false);
+ }
+
+
  function run() {
 
      var win = function(position) {       // Grab coordinates object from the Position object passed into success callback.
@@ -25,10 +35,6 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
      else {
         alert("Kein GPS eingeschaltet.");
      }
-
-
-
-     document.addEventListener("menubutton", onMenuKeyDown, false);
  }
 
 

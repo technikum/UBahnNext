@@ -17,7 +17,7 @@
   </head>
 
 
-  <body id="stage" class="theme">
+  <body id="stage" class="theme" onload="onLoad()">
   <div id="map_canvas" style="width:95%; height:90%"></div>
   <form name="Form">
        <input type="radio" height=15px name="Linien" value="AlleLinien" checked>Alle Linien anzeigen
@@ -27,12 +27,5 @@
        <input type="button" style="font-size: 15px" value="Exit" onclick="quit();" />
      </form>
 
-
-
-
-   <menu type="context">
-      <command label="Alle"  disabled="false" action="alle();"  accesskey="" />
-      <command label="UBahn" disabled="false" action="ubahn();" accesskey="" />
-   </menu>
-</body>
+  </body>
 </html>
