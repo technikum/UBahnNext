@@ -5,12 +5,12 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
 
 
  function onLoad() {
-    alert("onLoad");
+    navigator.notification.alert('onLoad');
     document.addEventListener("deviceready", onDeviceReady, false);
  }
 
  function onDeviceReady() {
-alert("onDeviceReady");
+navigator.notification.alert('onDeviceReady');
     document.addEventListener("menubutton", onMenuKeyDown, false);
  }
 
@@ -27,7 +27,7 @@ alert("onDeviceReady");
 
 
      var fail = function(e) {
-              alert("Can\'t retrieve position.\nError: " + e+"\nCode:"+e.code+"\nMessage:"+e.message);
+              navigator.notification.alert('Can\'t retrieve position.\nError: ' + e+'\nCode:'+e.code+'\nMessage:'+e.message);
      };
 
 
@@ -35,7 +35,7 @@ alert("onDeviceReady");
          navigator.geolocation.getCurrentPosition(win, fail, {enableHighAccuracy: true});
      }
      else {
-        alert("Kein GPS eingeschaltet.");
+        navigator.notification.alert('Kein GPS eingeschaltet.');
      }
  }
 
@@ -116,7 +116,7 @@ alert("onDeviceReady");
 
 
      if (!request) {        // überprüfen, ob Request erzeugt wurde
-	alert("Kann keine XMLHTTP-Instanz erzeugen");
+	navigator.notification.alert('Kann keine XMLHTTP-Instanz erzeugen');
 	return false;
      }
 
@@ -136,7 +136,7 @@ alert("onDeviceReady");
        if(request.readyState == 4) {
            // wenn der readyState 4 und der request.status 200 ist, dann ist alles korrekt gelaufen
            if(request.status != 200) {
-	      alert("Der Request wurde abgeschlossen, ist aber nicht OK\nFehler:"+request.status);
+	      navigator.notification.alert('Der Request wurde abgeschlossen, ist aber nicht OK\nFehler:'+request.status);
            }
 
            else {
@@ -203,20 +203,20 @@ alert("onDeviceReady");
 
 
  function alle() {
-    alert("alle");
+    navigator.notification.alert('alle');
  }
 
  function ubahn() {
-    alert("ubahn");
+    navigator.notification.alert('ubahn');
  }
 
 
  function onMenuKeyDown() {
-     alert("Menubutton!");
+     navigator.notification.alert('Menubutton!');
  }
 
  function quit() {
-     app.exitApp();
+     device.exitApp();     // navigator.app.exitApp();
  }
 
 
