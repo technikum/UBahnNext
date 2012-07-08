@@ -6,14 +6,16 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
 
  function onLoad() {
    // navigator.notification.alert('onLoad');
-alert("onLoad");
-    document.addEventListener("deviceready", onDeviceReady, true);
+//alert("onLoad");
+//    document.addEventListener("deviceready", onDeviceReady, true);
+
+    document.addEventListener("deviceready", function(){ alert("123");},true);
  }
 
  function onDeviceReady() {
 //navigator.notification.alert('onDeviceReady');
 alert("onDeviceReady");
-    document.addEventListener("menubutton", onMenuKeyDown, true);
+    document.addEventListener("menubutton", onMenuKeyDown, false);
  }
 
 
