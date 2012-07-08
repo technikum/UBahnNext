@@ -5,12 +5,14 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
 
 
  function onLoad() {
-    navigator.notification.alert('onLoad');
+   // navigator.notification.alert('onLoad');
+alert("onLoad");
     document.addEventListener("deviceready", onDeviceReady, false);
  }
 
  function onDeviceReady() {
-navigator.notification.alert('onDeviceReady');
+//navigator.notification.alert('onDeviceReady');
+alert("onDeviceReady");
     document.addEventListener("menubutton", onMenuKeyDown, false);
  }
 
