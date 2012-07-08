@@ -20,8 +20,8 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
 
  function onDeviceReady() {
 //navigator.notification.alert('onDeviceReady');
-  alert("onDeviceReady");
-   // document.addEventListener("menubutton", onMenuKeyDown, false);
+  //alert("onDeviceReady");
+    document.addEventListener("menubutton", onMenuKeyDown, false);
  }
 
 
@@ -222,7 +222,8 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
 
 
  function onMenuKeyDown() {
-     navigator.notification.alert('Menubutton!');
+//     navigator.notification.alert('Menubutton!');
+     alert("Menu");
  }
 
  function quit() {
