@@ -6,10 +6,10 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
 
  function onLoad() {
    // navigator.notification.alert('onLoad');
-//alert("onLoad");
+alert("onLoad");
 //    document.addEventListener("deviceready", onDeviceReady, true);
 
-    document.addEventListener("deviceready", function(){ alert("123");},true);
+    document.addEventListener("deviceready", function(){ alert("123");},false);
  }
 
  function onDeviceReady() {
