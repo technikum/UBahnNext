@@ -5,7 +5,17 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
 
 
  function onLoad() {
-     document.addEventListener("deviceready", onDeviceReady, false);
+
+    if( navigator.userAgent.match(/Android/i) ) {
+             onDeviceReady();
+    } else if (typeof navigator.device == "undefined"){
+            document.addEventListener("deviceready", onDeviceReady, false);
+    } else {
+             onDeviceReady();
+    } 
+
+
+    // document.addEventListener("deviceready", onDeviceReady, false);
  }
 
  function onDeviceReady() {
