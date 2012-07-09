@@ -127,7 +127,7 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
 
      if (!request) {        // überprüfen, ob Request erzeugt wurde
 	navigator.notification.alert('Kann keine XMLHTTP-Instanz erzeugen');
-	return false;
+	return;
      }
 
 

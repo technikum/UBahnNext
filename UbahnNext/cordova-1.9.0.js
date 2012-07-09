@@ -188,14 +188,27 @@ var cordova = {
      * Method to fire event from native code
      */
     fireDocumentEvent: function(type, data) {
-        var evt = createEvent(type, data);
+        
+        if(type == "backbutton" || type == "menubutton" || type == "searchbutton"){
+        var e = document.createEvent('Events');
+        e.initEvent(type);
+        if (data) {
+            for (var i in data) {
+                e[i] = data[i];
+            }
+        }
+        document.dispatchEvent(e);
+        return;
+    }
+        
+     /*   var evt = createEvent(type, data);
         if (typeof documentEventHandlers[type] != 'undefined') {
             setTimeout(function() {
                 documentEventHandlers[type].fire(evt);
             }, 0);
         } else {
             document.dispatchEvent(evt);
-        }
+        }*/
     },
     fireWindowEvent: function(type, data) {
         var evt = createEvent(type,data);
