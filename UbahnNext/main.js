@@ -227,7 +227,8 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
  }
 
  function quit() {
-     device.exitApp();     // navigator.app.exitApp();
+     //device.exitApp();     
+     navigator.app.exitApp();
  }
 
 
