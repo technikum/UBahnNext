@@ -1,7 +1,7 @@
 var request;
 var map;
 var pinColor="FF0000";    //standort rot
-var bool;   //nur ubahnen=true  ; alle=false;
+var bool=false;   //nur ubahnen=true  ; alle=false;
 var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
 
 
