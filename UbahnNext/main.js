@@ -1,26 +1,25 @@
 var request;
 var map;
 var pinColor="FF0000";    //standort rot
+var bool;   //nur ubahnen=true  ; alle=false;
 var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
 
 
  function onLoad() {
 
-    if( navigator.userAgent.match(/Android/i) ) {
+    /* if( navigator.userAgent.match(/Android/i) ) {
              onDeviceReady();
     } else if (typeof navigator.device == "undefined"){
             document.addEventListener("deviceready", onDeviceReady, false);
     } else {
              onDeviceReady();
-    } 
+    } */
 
 
-    // document.addEventListener("deviceready", onDeviceReady, false);
+    document.addEventListener("deviceready", onDeviceReady, false);
  }
 
  function onDeviceReady() {
-//navigator.notification.alert('onDeviceReady');
-  //alert("onDeviceReady");
     document.addEventListener("menubutton", onMenuKeyDown, false);
  }
 
@@ -45,7 +44,11 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
          navigator.geolocation.getCurrentPosition(win, fail, {enableHighAccuracy: true});
      }
      else {
-        navigator.notification.alert('Kein GPS eingeschaltet.');
+         if(bool == true)
+            navigator.notification.alert("Nur Ubahn!");
+         if(bool == false)
+             navigator.notification.alert("Alle!");
+        //navigator.notification.alert('Kein GPS eingeschaltet.');
      }
  }
 
@@ -155,7 +158,7 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
                // Namen aus dem XML-Dokument herauslesen
                var locations = xmlDoc.getElementsByTagName("locations")[0].childNodes;
 
-               var bool = document.Form.Linien[1].checked;    //nur ubahnen?
+               //var bool = document.Form.Linien[1].checked;    //nur ubahnen?
                for(var i=0; i<locations.length; i++) {
                    var locationRelatedLines = locations[i].getAttribute("relatedLines");
                    add = true;
@@ -214,12 +217,12 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
 
  function alle() {
      document.getElementById("menu").style.display = "none";
-     navigator.notification.alert('alle');
+     bool = false;
  }
 
  function ubahn() {
      document.getElementById("menu").style.display = "none";
-     navigator.notification.alert('ubahn');
+     bool = true;
  }
 
 
@@ -231,10 +234,17 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
      else {
         menu.style.display = "none";
      }
+     
+     document.addEventListener("backbutton", onBackKey, false);
+ }
+ 
+ 
+ function onBackKey() {
+     document.getElementById("menu").style.display = "none";
+     document.removeEventListener("backbutton", onBackKey, false);
  }
 
- function quit() {
-     //device.exitApp();     
+ function quit() { 
      navigator.app.exitApp();
  }
 
