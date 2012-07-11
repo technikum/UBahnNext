@@ -213,17 +213,24 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
 
 
  function alle() {
-    navigator.notification.alert('alle');
+     document.getElementById("menu").style.display = "none";
+     navigator.notification.alert('alle');
  }
 
  function ubahn() {
-    navigator.notification.alert('ubahn');
+     document.getElementById("menu").style.display = "none";
+     navigator.notification.alert('ubahn');
  }
 
 
  function onMenuKeyDown() {
-//     navigator.notification.alert('Menubutton!');
-     alert("Menu");
+     var menu = document.getElementById("menu");
+     if (menu.style.display == "none" || menu.style.display == "") {
+         menu.style.display = "block";
+     }
+     else {
+        menu.style.display = "none";
+     }
  }
 
  function quit() {
