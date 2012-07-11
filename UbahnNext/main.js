@@ -44,11 +44,7 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
          navigator.geolocation.getCurrentPosition(win, fail, {enableHighAccuracy: true});
      }
      else {
-         if(bool == true)
-            navigator.notification.alert("Nur Ubahn!");
-         if(bool == false)
-             navigator.notification.alert("Alle!");
-        //navigator.notification.alert('Kein GPS eingeschaltet.');
+         navigator.notification.alert('Kein GPS eingeschaltet.');
      }
  }
 
@@ -234,14 +230,6 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
      else {
         menu.style.display = "none";
      }
-     
-     document.addEventListener("backbutton", onBackKey, false);
- }
- 
- 
- function onBackKey() {
-     document.getElementById("menu").style.display = "none";
-     document.removeEventListener("backbutton", onBackKey, false);
  }
 
  function quit() { 
