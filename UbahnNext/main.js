@@ -40,7 +40,8 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
      };
 
 
-    if ($('#gps').val() == 'on') {
+    if (window.localStorage.getItem('gps') == "on") {
+        navigator.notification.alert('GPS on');
         navigator.geolocation.getCurrentPosition(win, fail, {enableHighAccuracy: true});
     }
     else {
