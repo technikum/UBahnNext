@@ -39,20 +39,15 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
               navigator.notification.alert('Can\'t retrieve position.\nError: ' + e+'\nCode:'+e.code+'\nMessage:'+e.message);
      };
 
-
-    if (window.localStorage.getItem('gps') == "on") {
-        navigator.notification.alert('GPS on');
+    
+    navigator.geolocation.getCurrentPosition(win, fail, {enableHighAccuracy: true});
+    /*if (window.localStorage.getItem('gps') == "on") {
         navigator.geolocation.getCurrentPosition(win, fail, {enableHighAccuracy: true});
     }
     else {
         navigator.notification.alert('Kein GPS eingeschaltet.');
-    }
-     /*if (localStorage.getItem('gps') == "on") {
-         navigator.geolocation.getCurrentPosition(win, fail, {enableHighAccuracy: true});
-     }
-     else {
-         navigator.notification.alert('Kein GPS eingeschaltet.');
-     }*/
+    }*/
+    
      
     // if (typeof(GpsGate) == 'undefined' || typeof(GpsGate.Client) == 'undefined')
  }
