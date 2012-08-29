@@ -40,12 +40,20 @@ var add;    //ob die linie hinzugefuegt wird (nur ubahn, oder alle)
      };
 
 
-     if (localStorage.getItem('gps') == "on") {
+    if ($('#gps').val() == 'on') {
+        navigator.geolocation.getCurrentPosition(win, fail, {enableHighAccuracy: true});
+    }
+    else {
+        navigator.notification.alert('Kein GPS eingeschaltet.');
+    }
+     /*if (localStorage.getItem('gps') == "on") {
          navigator.geolocation.getCurrentPosition(win, fail, {enableHighAccuracy: true});
      }
      else {
          navigator.notification.alert('Kein GPS eingeschaltet.');
-     }
+     }*/
+     
+    // if (typeof(GpsGate) == 'undefined' || typeof(GpsGate.Client) == 'undefined')
  }
 
 
